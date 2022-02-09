@@ -3,24 +3,24 @@ body {
 	height: 100vh;
 	width: 100vw;
 	overflow: hidden;
+	font-family: 'Lato', sans-serif;
 }
 
 .container {
-	display: grid;
+	display: inline-grid;
 	grid-template-columns: repeat(5, 1fr);
 	gap: 2vw;
 	grid-template-rows: repeat(6, 1fr);
 	width: 60vw;
 	height: 60vh;
-	/*margin-right: 20%;*/
-	margin-left: 20%;
+	margin: 20%;
 	margin-top: 10%;
 }
 
 .letter {
 	outline:  white 1px solid;
 	color: white;
-	font-size: calc(45vh/6);
+	font-size: calc(40vh/6);
 	text-align: center;
 }
 
@@ -29,9 +29,9 @@ body {
 }
 
 .incorrect {
-	background-color: rgba(255, 0, 0, .25);;
+	background-color: rgba(255, 0, 0, .25);
 }
 
 .misplaced {
-	background-color: rgba(255, 255, 0, .25);;
+	background-color: rgba(255, 255, 0, .25);
 }

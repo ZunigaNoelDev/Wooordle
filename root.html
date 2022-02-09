@@ -1,73 +1,39 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
-		<div class="container">
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
-			<div class="letter">
-			</div>
+		<div class="container" id="container">
 		</div>
 	</body>
 	<footer>
 		<script src="script.js"></script>
+		<script type="module">
+		  // Import the functions you need from the SDKs you need
+		  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+		  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js";
+		  // TODO: Add SDKs for Firebase products that you want to use
+		  // https://firebase.google.com/docs/web/setup#available-libraries
+
+		  // Your web app's Firebase configuration
+		  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		  const firebaseConfig = {
+		    apiKey: "AIzaSyAtZNB-Un5-2TVTpn-hkliK93iQwMBpBjQ",
+		    authDomain: "wooordle-2f982.firebaseapp.com",
+		    projectId: "wooordle-2f982",
+		    storageBucket: "wooordle-2f982.appspot.com",
+		    messagingSenderId: "72754255965",
+		    appId: "1:72754255965:web:8a65ad8f3472e96e79d5b4",
+		    measurementId: "G-8D0QTBBQMC"
+		  };
+
+		  // Initialize Firebase
+		  const app = initializeApp(firebaseConfig);
+		  const analytics = getAnalytics(app);
+		</script>
 	</footer>
 </html>

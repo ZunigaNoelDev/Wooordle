@@ -1,10 +1,32 @@
 document.addEventListener('keyup', logKey);
 
-var target = "CREEP";
-let row = 0;
+let wordList_3 = ["bet","fit","lot","tap","day","ton","gem","egg","hen","bed"];
+let wordList_4 = ["item","navy","hard","heir","main","cake","pass","date","bold","pole"];
+let wordList_5 = ["chair", "raise", "worth", "lease", "tract", "cheek", "steel", "power", "close", "craft"];
+let wordList_6 = ["bridge","reveal","retire","hiccup","monkey","junior","throat","facade","corner","impact"];
+let wordList_7 = ["certain","product","economy","contain","rainbow","explode","morning","century","academy","respect"];
+
+let wordList_m = {3: wordList_3, 4: wordList_4, 5: wordList_5, 6: wordList_6, 7: wordList_7};
+
 let length = 5;
+var target = wordList_m[length][Math.floor(Math.random()*wordList_m[length].length)].toUpperCase();
+let row = 0;
 let index = 0;
 var guess_g = "";
+
+function Setup(){
+  const container = document.getElementById("container");
+  container.style.gridTemplateColumns = "repeat(" + length.toString() + ", 1fr)";
+  container.style.width = (12 * length).toString() + "vw";
+  container.style.marginLeft = ((100 - (12 * length))/2).toString() + "vw";
+
+  for (let i = 0; i < (length * 6); i++) {
+    const letter = document.createElement("div");
+    letter.classList.add("letter");
+    container.appendChild(letter);
+  }
+}
+
 
 function logKey(e) {
   let letters = document.getElementsByClassName("letter");
@@ -29,15 +51,21 @@ function logKey(e) {
 }
 
 function Check(guess){
-  console.log(guess);
   let index_3 = 0;
+  let letters = document.getElementsByClassName("letter");
+
   for (let letter of guess) {
-    if (target.includes(letter)) {
-      let letters = document.getElementsByClassName("letter");
+    if (target[index_3] == letter){
+      let index_2 = (row * length) + index_3;
+      letters[index_2].classList.add("correct");
+    }
+    else if (target.includes(letter)) {
       let index_2 = (row * length) + index_3;
       letters[index_2].classList.add("misplaced");
-      console.log(index_2);
-      console.log(letter);
+    } 
+    else {
+      let index_2 = (row * length) + index_3;
+      letters[index_2].classList.add("incorrect");
     }
     index_3 = index_3 + 1;
   }
@@ -45,3 +73,5 @@ function Check(guess){
   index = 0;
   guess_g = "";
 }
+
+Setup();
